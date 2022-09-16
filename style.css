@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient( 180deg, rgb(57, 6, 105) 0%, rgb(0, 0, 0) 75%);
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    padding-top: 32px;
+}
+
+.cor-borda {
+    width: 120px;
+    margin: auto;
+    background: linear-gradient(90deg, #9572fc 0%,#43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+    padding-top: 25px;
+}
+
+.meus-jogos, .canais-streamers, .minhas-redes {
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #9572fc 0%,#43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 17px;
+}
+
+.conteudo-jogos, .conteudo-streamer, .conteudo-redes {
+    width: 580px;
+    height: auto;
+    background-color: #2a2634;
+    border-radius: 15px;
+    padding: 10px 0px 0px 25px;
+}
+
+.foto-jogo {
+    width: 100px;
+    margin: 20px 0;
+    margin-right: 16px;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.foto-jogo:hover {
+    transform: scale(1.10);
+    box-shadow: 0px 0px 12px rgb(243, 243, 36);
+}
+
+.foto-streamer {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid rgb(65, 63, 63);
+    margin: 30px 10px 30px 0px;
+    transition: 300ms;
+    opacity: 0.70;
+}
+
+.foto-streamer:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.meus-jogos h1, .canais-streamers h1, .minhas-redes h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 12px;
+    color: white;
+}
+
+.meus-jogos p, .canais-streamers p, .minhas-redes p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: rgb(196, 193, 193);
+}
+
+.imagem-redes {
+    width: 40px;
+    margin-top: 25px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    transition: 300ms;
+}
+
+.imagem-redes:hover {
+    transform: scale(1.2);
+}
+
+/* Animation */
+
+header div {
+    animation: fromTop .6s;
+}
+
+.conteudo-jogos .foto-jogo {
+    animation: fromInside .7s;
+}
+
+.meus-jogos {
+    animation: fromBottom 1s;
+}
+
+.canais-streamers {
+    animation: fromBottom .8s backwards;
+    animation-delay: 0.2s;
+}
+
+.minhas-redes {
+    animation: fromBottom .9s backwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-170px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromInside {
+    from{
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
